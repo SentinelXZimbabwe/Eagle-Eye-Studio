@@ -28,12 +28,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Animated background */
+/* === Animated background logo (JPG) === */
 body::before {
   content: "";
   position: fixed;
   inset: -10%;
-  background: url("logo/logo.png") center no-repeat;
+  background: url("logo/logo.jpg") center no-repeat;
   background-size: 420px;
   opacity: 0.06;
   animation: floatBg 18s ease-in-out infinite;
@@ -46,6 +46,7 @@ body::before {
   100% { transform: translate(0,0) scale(1); }
 }
 
+/* === Entrance animation === */
 .fade-up {
   animation: fadeUp 1s ease forwards;
   opacity: 0;
@@ -56,14 +57,30 @@ body::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* === Header === */
 header {
   text-align: center;
   padding: 75px 20px 55px;
 }
 
+/* === Logo with aesthetic border === */
 header img {
   width: 140px;
   margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  border: 2px solid rgba(15,185,177,0.65);
+  box-shadow:
+    0 0 18px rgba(15,185,177,0.45),
+    inset 0 0 12px rgba(15,185,177,0.25);
+  animation: pulseBorder 6s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0% { box-shadow: 0 0 18px rgba(15,185,177,0.35), inset 0 0 12px rgba(15,185,177,0.25); }
+  50% { box-shadow: 0 0 28px rgba(15,185,177,0.65), inset 0 0 18px rgba(15,185,177,0.45); }
+  100% { box-shadow: 0 0 18px rgba(15,185,177,0.35), inset 0 0 12px rgba(15,185,177,0.25); }
 }
 
 header h1 {
@@ -82,6 +99,7 @@ section {
   padding: 55px 20px;
 }
 
+/* === About === */
 .about {
   text-align: center;
   line-height: 1.8;
@@ -89,6 +107,7 @@ section {
   margin: auto;
 }
 
+/* === Services === */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -114,7 +133,7 @@ section {
   margin-bottom: 14px;
 }
 
-/* Booking form */
+/* === Booking form === */
 form {
   max-width: 520px;
   margin: auto;
@@ -177,7 +196,7 @@ form button:hover {
   opacity: 0.95;
 }
 
-/* Contact */
+/* === Contact === */
 .contact-links {
   text-align: center;
 }
@@ -185,7 +204,6 @@ form button:hover {
 .contact-title {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  opacity: 0.95;
 }
 
 .contact-links a {
@@ -206,6 +224,7 @@ form button:hover {
   transform: scale(1.05);
 }
 
+/* === Footer === */
 footer {
   text-align: center;
   padding: 35px 20px;
@@ -213,6 +232,7 @@ footer {
   opacity: 0.7;
 }
 
+/* === Mobile === */
 @media (max-width: 600px) {
   header h1 { font-size: 1.9rem; }
   header img { width: 110px; }
