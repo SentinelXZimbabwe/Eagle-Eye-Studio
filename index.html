@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eagle Eye Studio | Music Video Production</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --primary: #0fb9b1;
+  --dark: #0b1c1e;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+}
+
+/* Animated background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -10%;
+  background: url("logo/logo.png") center no-repeat;
+  background-size: 420px;
+  opacity: 0.06;
+  animation: floatBg 18s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes floatBg {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(14px,-10px) scale(1.03); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  text-align: center;
+  padding: 75px 20px 55px;
+}
+
+header img {
+  width: 140px;
+  margin-bottom: 18px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+.about {
+  text-align: center;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: auto;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255,255,255,0.08);
+}
+
+.card i {
+  font-size: 2.3rem;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+/* Booking form */
+form {
+  max-width: 520px;
+  margin: auto;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.field i {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: var(--primary);
+}
+
+.helper-text {
+  display: block;
+  font-size: 0.85rem;
+  color: #fff;
+  opacity: 0.85;
+  margin: 6px 0 6px 44px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 1rem;
+}
+
+form textarea {
+  min-height: 90px;
+  resize: vertical;
+  padding-left: 16px;
+}
+
+form button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 40px;
+  background: var(--primary);
+  color: #002;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+/* Contact */
+.contact-links {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 14px 22px;
+  background: var(--primary);
+  color: #002;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.9rem; }
+  header img { width: 110px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="fade-up">
+  <img src="logo/logo.png" alt="Eagle Eye Studio Logo">
+  <h1>EAGLE EYE STUDIO</h1>
+  <p>Music Video Recording & Visual Production</p>
+</header>
+
+<section class="about fade-up">
+  Eagle Eye Studio is a growing music video recording company specializing in
+  <strong>Zimdancehall</strong>, <strong>Amapiano</strong>,
+  <strong>Hip-Hop</strong> and <strong>Afro-Pop</strong>.
+</section>
+
+<section class="fade-up">
+  <div class="services">
+    <div class="card"><i class="fas fa-video"></i><h3>Music Videos</h3></div>
+    <div class="card"><i class="fas fa-music"></i><h3>Genre Focus</h3></div>
+    <div class="card"><i class="fas fa-camera-retro"></i><h3>Visual Direction</h3></div>
+    <div class="card"><i class="fas fa-clapperboard"></i><h3>Studio Sessions</h3></div>
+  </div>
+</section>
+
+<section class="fade-up">
+<h2 style="text-align:center;margin-bottom:20px;">Book a Session</h2>
+
+<form id="bookingForm">
+
+  <div class="field">
+    <i class="fas fa-user"></i>
+    <input type="text" id="clientName" placeholder="Your Name" required>
+  </div>
+
+  <div class="field">
+    <i class="fas fa-briefcase"></i>
+    <select id="service" required>
+      <option value="">Select Service</option>
+      <option>Music Video Shoot</option>
+      <option>Studio Video Shoot</option>
+      <option>Visual Direction Only</option>
+      <option>Custom Project</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <i class="fas fa-calendar-days"></i>
+    <span class="helper-text">Select appointment date</span>
+    <input type="date" id="date" required>
+  </div>
+
+  <div class="field">
+    <i class="fas fa-clock"></i>
+    <span class="helper-text">Select appointment time</span>
+    <input type="time" id="time" required>
+  </div>
+
+  <textarea id="notes" placeholder="Extra notes (optional)"></textarea>
+
+  <button type="submit">
+    <i class="fab fa-whatsapp"></i> Book via WhatsApp
+  </button>
+</form>
+</section>
+
+<section class="contact-links fade-up">
+  <div class="contact-title">
+    📞 Contact us here 👇 | 💬 WhatsApp us anytime
+  </div>
+
+  <a href="https://wa.me/263784078301" target="_blank">
+    <i class="fab fa-whatsapp"></i> 078 407 8301
+  </a>
+
+  <a href="https://wa.me/263776738381" target="_blank">
+    <i class="fab fa-whatsapp"></i> 077 673 8381
+  </a>
+</section>
+
+<footer>© 2026 Eagle Eye Studio · All Rights Reserved</footer>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("clientName").value;
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const notes = document.getElementById("notes").value || "None";
+
+  const message =
+`🎬 EAGLE EYE STUDIO BOOKING 🎬
+
+👤 Name: ${name}
+🎥 Service: ${service}
+📅 Date: ${date}
+⏰ Time: ${time}
+📝 Notes: ${notes}`;
+
+  const phone = "263784078301";
+  const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
